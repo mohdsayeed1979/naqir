@@ -1,0 +1,124 @@
+name: naqirgiftbox
+description: "Naqir Gift Box - premium gifting e-commerce app"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: 2.6.1
+
+  # Routing
+  go_router: ^17.2.3
+
+  # Networking
+  dio: ^5.11.0
+
+  # Models / serialization
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.12.0
+
+  # Dependency injection
+  get_it: ^9.2.1
+
+  # Local storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  flutter_secure_storage: ^10.3.1
+  path_provider: ^2.1.5
+
+  # Images
+  cached_network_image: ^3.4.1
+  photo_view: ^0.15.0
+  flutter_svg: ^2.3.0
+
+  # Connectivity
+  connectivity_plus: ^7.3.1
+  internet_connection_checker_plus: ^3.1.1
+
+  # Typography
+  google_fonts: ^8.1.0
+
+  # Firebase (see docs/ARCHITECTURE.md §9 — inactive until a Firebase project is configured)
+  firebase_core: ^4.12.1
+  firebase_messaging: ^16.4.3
+  firebase_analytics: ^12.4.5
+  firebase_crashlytics: ^5.2.6
+  flutter_local_notifications: ^20.1.0
+
+  # UI
+  shimmer: ^3.0.0
+  cupertino_icons: ^1.0.8
+
+  # Forms
+  reactive_forms: ^18.2.2
+
+  # Platform integration
+  url_launcher: ^6.3.2
+  share_plus: ^12.0.2
+  speech_to_text: ^7.4.0
+  permission_handler: ^13.0.0
+  package_info_plus: ^9.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  build_runner: ^2.15.1
+  freezed: ^3.2.5
+  json_serializable: ^6.14.1
+  mocktail: ^1.0.5
+  flutter_native_splash: ^2.4.7
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/images/
+    - assets/images/onboarding/
+    - assets/images/products/
+    - assets/icons/
+
+# flutter_launcher_icons config — run `dart run flutter_launcher_icons` after
+# assets/icons/app_icon.png is added.
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/icons/app_icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#9D6B3F"
+  adaptive_icon_foreground: "assets/icons/app_icon_foreground.png"
+  web:
+    generate: true
+    image_path: "assets/icons/app_icon.png"
+  windows:
+    generate: true
+    image_path: "assets/icons/app_icon.png"
+
+# flutter_native_splash config — run `dart run flutter_native_splash:create` after
+# assets/images/splash_logo.png is added.
+flutter_native_splash:
+  color: "#FFFDF8"
+  image: assets/images/splash_logo.png
+  color_dark: "#1E1B18"
+  image_dark: assets/images/splash_logo.png
+  android_12:
+    color: "#FFFDF8"
+    image: assets/images/splash_logo.png
+    color_dark: "#1E1B18"
+    image_dark: assets/images/splash_logo.png
+  web: false

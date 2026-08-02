@@ -74,6 +74,10 @@
   "homeBestSellers": "الأكثر مبيعًا",
   "homeNewArrivals": "وصل حديثًا",
   "homeShopByCategory": "تسوّق حسب الفئة",
+  "homeBannerGiftTitle": "علب هدايا الموسم الجديد",
+  "homeBannerGiftSubtitle": "تشكيلات مصنوعة يدويًا لكل مناسبة",
+  "homeBannerShippingTitle": "شحن مجاني",
+  "homeBannerShippingSubtitle": "لجميع الطلبات فوق 200 ريال",
 
   "categoriesTitle": "جميع الفئات",
   "categoriesEmpty": "لا توجد فئات متاحة",

@@ -83,6 +83,10 @@
   "homeBestSellers": "Best Sellers",
   "homeNewArrivals": "New Arrivals",
   "homeShopByCategory": "Shop by Category",
+  "homeBannerGiftTitle": "New Season Gift Boxes",
+  "homeBannerGiftSubtitle": "Handcrafted collections for every occasion",
+  "homeBannerShippingTitle": "Free Shipping",
+  "homeBannerShippingSubtitle": "On all orders over SAR 200",
 
   "categoriesTitle": "All Categories",
   "categoriesEmpty": "No categories available",

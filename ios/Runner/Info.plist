@@ -5,7 +5,7 @@
 		<key>CFBundleDevelopmentRegion</key>
 		<string>$(DEVELOPMENT_LANGUAGE)</string>
 		<key>CFBundleDisplayName</key>
-		<string>Naqirgiftbox</string>
+		<string>Naqir Gift Box</string>
 		<key>CFBundleExecutable</key>
 		<string>$(EXECUTABLE_NAME)</string>
 		<key>CFBundleIdentifier</key>
@@ -47,5 +47,9 @@
 		<true/>
 		<key>UIStatusBarHidden</key>
 		<false/>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>Naqir Gift Box uses your microphone for voice search.</string>
+		<key>NSSpeechRecognitionUsageDescription</key>
+		<string>Naqir Gift Box uses speech recognition to power voice search.</string>
 	</dict>
 </plist>

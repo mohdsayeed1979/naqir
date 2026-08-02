@@ -20,9 +20,35 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   shell, auth, home, products, cart, checkout, orders, profile, and settings copy.
 - Git repository initialized.
 
+- Core infrastructure: Material 3 theme (explicit brand `ColorScheme`, locale-aware typography),
+  go_router `StatefulShellRoute` bottom-nav shell with auth-gated redirects, GetIt+Riverpod DI
+  bridge, Dio network layer (auth-refresh/retry/logging interceptors, typed `Result`/`Failure`
+  error mapping), Hive-backed local storage, `runZonedGuarded` error boundary.
+- Full feature set running end-to-end against mock data: splash, onboarding, authentication
+  (login/register/OTP/forgot-password), home, categories, product listing (filters/sort/infinite
+  scroll), product details (zoomable gallery, variants, specs, reviews, related/recently-viewed),
+  search (history/trending/voice), wishlist, cart (coupons), checkout (address book/shipping),
+  orders (history/detail/tracking timeline), profile & settings (dark mode, language switch,
+  About/Contact/FAQ/Privacy/Terms).
+- Payment architecture: `PaymentGateway` interface + factory; Cash on Delivery is a real working
+  gateway, Stripe/Moyasar/HyperPay/Apple Pay/Google Pay are registered as clearly-labeled
+  unconfigured stubs pending merchant credentials.
+- Real product/category/review mock catalog (15 products across 6 categories) with generated,
+  on-brand placeholder imagery — no external image hosts or hotlinked assets.
+- One real widget test (`test/widget_test.dart`) covering `PrimaryButton`; full suite tracked as
+  its own milestone.
+
 ### Changed
 - Pinned `flutter_riverpod`/`riverpod` to the 2.6.1 stable line — Riverpod 3.x's current release
   pulls a `test`/`analyzer` chain that conflicts with `json_serializable` under this Flutter SDK.
 - Dropped `riverpod_generator`, `hive_generator`, `custom_lint`/`riverpod_lint` after confirming real
   version conflicts (documented in `docs/ARCHITECTURE.md`); Riverpod providers are hand-written and
   Hive stores JSON via the existing Freezed `toJson`/`fromJson` instead of generated TypeAdapters.
+
+### Verified
+- `flutter analyze`: zero issues across the full codebase.
+- `flutter build web --release`: succeeds (dart2js + tree-shaking + Wasm-compatibility dry run).
+- Runtime smoke check via browser devtools: Hive opens all boxes, DI configures, the widget tree
+  builds through to the splash screen (confirmed by its asset being fetched), zero console errors.
+  Pixel-level visual verification is still pending — the Browser preview pane wasn't displayed this
+  session, which prevents frame compositing independent of app correctness.

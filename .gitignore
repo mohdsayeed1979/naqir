@@ -52,6 +52,9 @@ app.*.map.json
 *.freezed.dart
 *.gr.dart
 
+# Generated localization (regenerated automatically by `flutter pub get`/`flutter run` via l10n.yaml)
+lib/core/localization/gen/
+
 # Android release signing (never commit real keystores/credentials)
 **/android/key.properties
 **/*.jks

@@ -43,17 +43,26 @@ Legend: ✅ done · 🚧 in progress · ⬜ not started · 🔒 blocked on user-
 - ✅ Orders — history, detail, status tracking timeline
 - ✅ Profile & settings — edit profile, dark mode (system/light/dark), language switch, About,
   Contact, FAQ, Privacy Policy, Terms
-- 🔒 Push notifications (needs user's Firebase project — not started)
+- ✅ Notification preferences UI + `NotificationService` (FCM + local notifications), inert until
+  a Firebase project is wired — see gap below
+- ✅ Offline connectivity banner (real-reachability check via `connectivityStatusProvider`)
 
 ## Phase 5 — Quality & Platforms
-- ⬜ Offline support polish pass (cached images, connectivity banners)
-- 🚧 Automated tests (one real widget test in place; full suite is its own milestone)
-- 🚧 Web build verified — `flutter analyze` clean, `flutter build web --release` succeeds; visual
-  smoke test blocked this session because the Browser preview pane wasn't displayed (frame
-  compositing needs the pane visible) — code-level verification only, not yet eyeballed
-- ⬜ Android build verified
-- 🔒 iOS build (needs macOS/Xcode — not available on this machine)
-- 🔒 Windows desktop build (needs Visual Studio C++ workload — needs confirmation before install)
+- ✅ Offline support (wishlist/cart/recently-viewed/search-history/addresses all Hive-backed;
+  connectivity banner wired app-wide)
+- ✅ Automated tests: unit tests (`Result`, `CartNotifier`, `ProductRepositoryImpl`), widget tests
+  (`PrimaryButton`, `ProductCard`), and one `integration_test` happy-path (browse → add to cart →
+  cart tab) — written and passing where runnable locally; the integration test needs a connected
+  device/emulator to execute and hasn't been run in this session (see CHANGELOG)
+- ✅ Web build verified — `flutter analyze` clean, `flutter build web --release` succeeds; pixel
+  visual check still pending (Browser preview pane wasn't displayed this session)
+- ✅ Android build verified — `flutter build apk --debug` succeeds (SDK licenses accepted;
+  `permission_handler` pinned to 12.0.3 after 13.0.0's `permission_handler_android` 14.0.0
+  required AGP 9.x, newer than the project's AGP 8.9.1 — see CHANGELOG)
+- ✅ Windows build verified — `flutter build windows --debug` succeeds (Visual Studio Build Tools +
+  ATL component installed; `flutter_local_notifications`/`flutter_secure_storage` Windows plugins
+  need it)
+- 🔒 iOS build (needs macOS/Xcode — not available on this machine; code is iOS-ready)
 
 ## Phase 6 — Documentation
 - 🚧 Architecture doc in place; README, installation guide, API docs, deployment guide, folder
@@ -61,8 +70,10 @@ Legend: ✅ done · 🚧 in progress · ⬜ not started · 🔒 blocked on user-
 
 ## Known blockers (see [docs/ARCHITECTURE.md §11](docs/ARCHITECTURE.md#11-known-gaps-requiring-the-users-own-accountshardware))
 1. No Zid Partner API credentials yet → app runs on realistic mock data.
-2. No Firebase project yet → push notifications not started.
+2. No Firebase project yet → push notifications code-complete but inactive (`NotificationService`
+   no-ops safely without one).
 3. No payment merchant keys yet → payment architecture complete, native SDKs not wired.
-4. Windows machine → iOS cannot be compiled here; Windows desktop build needs Visual Studio.
+4. Windows machine → iOS cannot be compiled here.
 5. Web visual verification pending — needs the Browser pane displayed to compare against a
    screenshot in a future turn, or the user running `flutter run -d chrome` locally.
+6. `integration_test/app_test.dart` needs a connected device/emulator to actually execute.

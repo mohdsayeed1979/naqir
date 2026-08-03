@@ -59,7 +59,7 @@ class ProfileScreen extends ConsumerWidget {
           _MenuTile(
             icon: Icons.notifications_none_rounded,
             label: l10n.profileNotifications,
-            onTap: () {},
+            onTap: () => context.push(RoutePaths.notifications),
           ),
           _MenuTile(
             icon: Icons.settings_outlined,

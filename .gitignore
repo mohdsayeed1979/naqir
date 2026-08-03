@@ -33,6 +33,10 @@ migrate_working_dir/
 /build/
 /coverage/
 
+# Gradle/CMake also maintain their own nested build caches (android/build/,
+# android/app/build/, windows/x64/, etc.) — not just the root /build/ above.
+**/build/
+
 # Symbolication related
 app.*.symbols
 

@@ -5,6 +5,7 @@ import 'package:naqirgiftbox/core/router/app_router.dart';
 import 'package:naqirgiftbox/core/theme/app_theme.dart';
 import 'package:naqirgiftbox/shared/providers/locale_provider.dart';
 import 'package:naqirgiftbox/shared/providers/theme_mode_provider.dart';
+import 'package:naqirgiftbox/shared/widgets/offline_banner.dart';
 
 class NaqirGiftBoxApp extends ConsumerWidget {
   const NaqirGiftBoxApp({super.key});
@@ -25,6 +26,8 @@ class NaqirGiftBoxApp extends ConsumerWidget {
       locale: locale,
       supportedLocales: supportedLocales,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
+      builder: (context, child) =>
+          OfflineBanner(child: child ?? const SizedBox.shrink()),
     );
   }
 }

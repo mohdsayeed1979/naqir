@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
@@ -16,6 +17,7 @@ import 'package:naqirgiftbox/features/categories/data/datasources/category_mock_
 import 'package:naqirgiftbox/features/categories/data/datasources/category_remote_data_source.dart';
 import 'package:naqirgiftbox/features/categories/data/repositories/category_repository_impl.dart';
 import 'package:naqirgiftbox/features/categories/domain/repositories/category_repository.dart';
+import 'package:naqirgiftbox/features/notifications/data/notification_service.dart';
 import 'package:naqirgiftbox/features/payment/data/gateways/cash_on_delivery_gateway.dart';
 import 'package:naqirgiftbox/features/payment/data/gateways/unconfigured_gateway.dart';
 import 'package:naqirgiftbox/features/payment/data/repositories/payment_gateway_factory.dart';
@@ -58,6 +60,7 @@ Future<void> configureDependencies() async {
   _configureProductsFeature();
   _configureCategoriesFeature();
   _configurePaymentFeature();
+  _configureNotificationsFeature();
 }
 
 void _configureAuthFeature() {
@@ -123,5 +126,14 @@ void _configurePaymentFeature() {
         'Google Pay',
       ),
     }),
+  );
+}
+
+void _configureNotificationsFeature() {
+  getIt.registerLazySingleton<FlutterLocalNotificationsPlugin>(
+    FlutterLocalNotificationsPlugin.new,
+  );
+  getIt.registerLazySingleton<NotificationService>(
+    () => NotificationService(getIt<FlutterLocalNotificationsPlugin>()),
   );
 }

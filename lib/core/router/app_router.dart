@@ -13,6 +13,7 @@ import 'package:naqirgiftbox/features/categories/presentation/screens/categories
 import 'package:naqirgiftbox/features/checkout/presentation/screens/add_address_screen.dart';
 import 'package:naqirgiftbox/features/checkout/presentation/screens/checkout_screen.dart';
 import 'package:naqirgiftbox/features/home/presentation/screens/home_screen.dart';
+import 'package:naqirgiftbox/features/notifications/presentation/screens/notifications_screen.dart';
 import 'package:naqirgiftbox/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:naqirgiftbox/features/orders/presentation/screens/order_detail_screen.dart';
 import 'package:naqirgiftbox/features/orders/presentation/screens/orders_screen.dart';
@@ -129,6 +130,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: RoutePaths.settings,
         builder: (context, state) => const SettingsScreen(),
+      ),
+      GoRoute(
+        path: RoutePaths.notifications,
+        builder: (context, state) => const NotificationsScreen(),
       ),
       GoRoute(
         path: RoutePaths.editProfile,

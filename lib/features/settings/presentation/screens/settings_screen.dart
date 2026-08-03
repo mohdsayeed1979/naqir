@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:naqirgiftbox/core/constants/app_dimens.dart';
 import 'package:naqirgiftbox/core/localization/gen/app_localizations.dart';
+import 'package:naqirgiftbox/core/router/route_paths.dart';
 import 'package:naqirgiftbox/shared/providers/locale_provider.dart';
 import 'package:naqirgiftbox/shared/providers/theme_mode_provider.dart';
 
@@ -64,11 +66,11 @@ class SettingsScreen extends ConsumerWidget {
                 ref.read(localeProvider.notifier).setLocale(selection.first),
           ),
           const SizedBox(height: AppSpacing.lg),
-          SwitchListTile(
+          ListTile(
             contentPadding: EdgeInsets.zero,
             title: Text(l10n.settingsNotificationPreferences),
-            value: true,
-            onChanged: (_) {},
+            trailing: const Icon(Icons.chevron_right_rounded),
+            onTap: () => context.push(RoutePaths.notifications),
           ),
         ],
       ),

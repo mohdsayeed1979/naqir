@@ -27,6 +27,7 @@ abstract final class RoutePaths {
   static String orderDetailPath(String id) => '/orders/$id';
 
   static const settings = '/settings';
+  static const notifications = '/notifications';
   static const editProfile = '/profile/edit';
   static const addresses = '/profile/addresses';
   static const addAddress = '/profile/addresses/add';

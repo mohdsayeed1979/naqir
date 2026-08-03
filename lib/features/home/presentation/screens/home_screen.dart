@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:naqirgiftbox/core/constants/app_dimens.dart';
+import 'package:naqirgiftbox/core/constants/asset_paths.dart';
 import 'package:naqirgiftbox/core/error/failures.dart';
 import 'package:naqirgiftbox/core/localization/gen/app_localizations.dart';
 import 'package:naqirgiftbox/core/router/route_paths.dart';
@@ -71,6 +72,16 @@ class HomeScreen extends ConsumerWidget {
                     ),
                     child: Row(
                       children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(AppRadius.sm),
+                          child: Image.asset(
+                            AssetPaths.appIcon,
+                            width: 40,
+                            height: 40,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        const SizedBox(width: AppSpacing.sm),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

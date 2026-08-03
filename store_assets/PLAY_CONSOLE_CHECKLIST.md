@@ -34,6 +34,26 @@ lost — but that's a support process, not instant, so don't rely on losing it b
 Upload this `.aab` file to your chosen release track (Internal testing is the fastest way to
 start — no review wait).
 
+### Release notes (per-language, 500 char limit each)
+
+**English** (350 chars):
+```
+Naqir Gift Box — Internal Testing v1.0.0
+
+First testing build! Browse gift boxes & dates, search, filter, save to wishlist, add to cart, and check out with saved addresses. Track orders, switch English/Arabic (full RTL), and toggle dark mode.
+
+Running on sample catalog data for this test phase — Cash on Delivery only for now. Feedback welcome!
+```
+
+**Arabic** (477 chars):
+```
+نقير قيفت بوكس — نسخة تجريبية v1.0.0
+
+تصفح علب الهدايا والتمور، ابحث وصفِّ، احفظ في المفضلة، أضف للسلة، وأكمل الشراء بعناوين محفوظة. تتبّع طلباتك، وبدّل بين العربية والإنجليزية، وجرّب الوضع الداكن.
+
+بيانات تجريبية حاليًا، والدفع عند الاستلام فقط. نرحب بملاحظاتكم!
+```
+
 ## 3. Store listing
 
 **Short description** (80 char max):

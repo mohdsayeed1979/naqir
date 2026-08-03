@@ -101,6 +101,45 @@ edge works; your phone's native resolution is fine.
 **Contact details**: phone `+966505457678`, email `r.albuthi@almousa.com.sa` (from the site's own
 published contact info — swap if you'd rather use a different support address)
 
+### Arabic translation (recommended for your actual market)
+
+Play Console offers an "Import translations with AI" auto-translate option — skip it. It's a
+literal machine translation that won't know your real brand name and reads stiffer than
+hand-written copy. Add Arabic manually under *Store presence → Main store listing → Translations*
+with this instead:
+
+**App name (AR)**: `نقير التمر` — the business's real name, not a transliteration of the English
+one. (Caught and fixed the same mistake in the app's own Arabic localization while preparing
+this — see CHANGELOG.)
+
+**Short description (AR)** (73/80 chars):
+```
+علب هدايا وتمور فاخرة، مصنوعة يدويًا في الرياض. تصفح واحفظ وتتبّع طلباتك.
+```
+
+**Full description (AR)** (1057/4000 chars):
+```
+نقير التمر يقدّم لكم أرقى علب الهدايا والتمور المصنوعة يدويًا في الرياض، مباشرة إلى هاتفك.
+
+كل علبة تُجمَّع يدويًا في ورشتنا بالرياض، بمزيج من تمور مختارة بعناية وأقمشة منسوجة فاخرة ولمسة شريط مميزة — لتناسب اللحظات التي تستحق أكثر من هدية عادية.
+
+ماذا يمكنك أن تفعل
+• تصفّح مجموعتنا الكاملة: علب الهدايا، أطباق التمور، تشكيلات الشوكولاتة، أطقم العود والبخور، هدايا الأعراس، والهدايا المؤسسية
+• ابحث بالاسم أو استخدم البحث الصوتي للعثور على ما تريد بسرعة
+• صفِّ ورتّب النتائج حسب السعر أو الأكثر شيوعًا أو الأحدث
+• احفظ المفضلة في قائمة الأمنيات، وتابع من حيث توقفت مع "شوهد مؤخرًا"
+• أضف إلى السلة، فعِّل كوبونات الخصم، وأكمل الشراء بعناوين محفوظة
+• تتبّع كل طلب من لحظة التأكيد وحتى التوصيل
+• أدِر ملفك الشخصي وعناوينك وتفضيلات الإشعارات
+• بدِّل بسهولة بين العربية والإنجليزية، بدعم كامل للكتابة من اليمين لليسار
+• اختر الوضع الفاتح أو الداكن بما يناسبك
+
+لكل مناسبة
+سواء كانت عيدًا أو زفافًا أو هدية للشركات أو مكافأة شخصية، صُمِّمت مجموعاتنا المنتقاة لتجعل كل لحظة إهداء لحظة راقية ومدروسة.
+
+نقير التمر مقرّها في الضياء، الرياض، المملكة العربية السعودية.
+```
+
 ## 4. Privacy policy — **[YOU]**
 
 Google requires a **live, public URL** — in-app text isn't enough. I've written the page for you:

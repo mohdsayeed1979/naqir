@@ -45,6 +45,22 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   version conflicts (documented in `docs/ARCHITECTURE.md`); Riverpod providers are hand-written and
   Hive stores JSON via the existing Freezed `toJson`/`fromJson` instead of generated TypeAdapters.
 
+## [Unreleased] (continued 2)
+
+### Changed
+- Replaced the generated placeholder gift-box glyph with the real "نقير التمر" brand logo
+  (confirmed by the user) across the launcher icon, splash screen, and in-app brand mark — same
+  asset file paths, so no Dart code changed.
+- Dropped the Android adaptive-icon config: the real logo has no transparent-background version to
+  use as an adaptive-icon foreground layer. A flat (non-adaptive) launcher icon works fine without
+  one; revisit once a proper source asset exists.
+
+### Known issue
+- The supplied logo source is only 252×240px. Generated icons at or below that size (app launcher,
+  favicon, most in-app uses) look correct; icons that must scale *above* it — notably the 1024×1024
+  iOS App Store icon and 512×512 Android Play Store icon — show visible softness. Get a high-
+  resolution (1024×1024 minimum, ideally vector) source from the business before store submission.
+
 ## [Unreleased] (continued)
 
 ### Added

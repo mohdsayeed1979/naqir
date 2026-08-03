@@ -95,14 +95,17 @@ flutter:
 
 # flutter_launcher_icons config — run `dart run flutter_launcher_icons` after
 # assets/icons/app_icon.png is added.
+#
+# No adaptive_icon_foreground/background: the real brand logo (see below) has
+# no transparent-background version to use as an adaptive-icon foreground
+# layer. Ask the business for one (or a vector source) to enable Android
+# adaptive icons later — a flat launcher icon works fine without it.
 flutter_launcher_icons:
   android: true
   ios: true
   remove_alpha_ios: true
   image_path: "assets/icons/app_icon.png"
   min_sdk_android: 21
-  adaptive_icon_background: "#9D6B3F"
-  adaptive_icon_foreground: "assets/icons/app_icon_foreground.png"
   web:
     generate: true
     image_path: "assets/icons/app_icon.png"

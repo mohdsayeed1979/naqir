@@ -65,8 +65,8 @@ Legend: ✅ done · 🚧 in progress · ⬜ not started · 🔒 blocked on user-
 - 🔒 iOS build (needs macOS/Xcode — not available on this machine; code is iOS-ready)
 
 ## Phase 6 — Documentation
-- 🚧 Architecture doc in place; README, installation guide, API docs, deployment guide, folder
-  structure doc still to write
+- ✅ README, installation guide, API docs, deployment guide, folder structure doc all written
+  (see the table in [README.md](README.md#documentation))
 
 ## Known blockers (see [docs/ARCHITECTURE.md §11](docs/ARCHITECTURE.md#11-known-gaps-requiring-the-users-own-accountshardware))
 1. No Zid Partner API credentials yet → app runs on realistic mock data.

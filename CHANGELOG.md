@@ -101,3 +101,72 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   builds through to the splash screen (confirmed by its asset being fetched), zero console errors.
   Pixel-level visual verification is still pending — the Browser preview pane wasn't displayed this
   session, which prevents frame compositing independent of app correctness.
+
+## [Unreleased] — Real product catalog & images
+
+### Added
+- Replaced the 15-product invented placeholder catalog with the real 191-product catalog scraped
+  from naqirgiftbox.com's own public, unauthenticated storefront API (`/api/v1/products`) — real
+  SKUs, names, prices, stock quantities, and original-resolution photos for every product, including
+  per-variant photos for the 73 "available in several options" products (182/189 variants resolved
+  to their own distinct photo; the remainder fall back to the parent product's gallery).
+- `ProductImageMapping` (`lib/features/products/data/datasources/product_image_mapping.dart`):
+  SKU → bundled local asset path, plus remote gallery/variant image maps for the extended
+  photos that are served live rather than bundled (see rationale below).
+- 191 real product photos downloaded, re-encoded to JPEG (longest edge capped at 1000px, quality 82)
+  and bundled at `assets/images/products/<SKU>.jpg` — replacing the 7 generated placeholder box
+  images, which were deleted.
+- Three real product-line categories (Termeh Box / Termeh Chest / Gift Box), replacing the 6
+  invented ones — derived directly from the real product naming already present in every SKU/slug,
+  since the live storefront itself only exposes one "Gift box" category.
+- `scripts/scraping/` — the reproducible pipeline that produced the above (`fetch_catalog.py`
+  pulls the raw API data, `build_catalog.py` consolidates it, `download_images.py` downloads and
+  compresses the photos, `generate_dart.py` regenerates the three Dart files above). Kept as an
+  audit trail / re-run path, not an app dependency.
+
+### Changed
+- `pubspec.yaml`: moved `integration_test` and `flutter_native_splash` from `dev_dependencies` to
+  regular `dependencies` — see Fixed below.
+
+### Fixed
+- Real, reproducible Android **release** build failure (`flutter build apk --release`), unrelated
+  to the catalog work above but blocking it: `GeneratedPluginRegistrant.java` unconditionally
+  references every plugin with an Android `pluginClass`, while the Flutter Gradle plugin correctly
+  excludes `dev_dependency`-only plugins from the release compile classpath — the two disagree,
+  so the release build fails with "package ... does not exist" for any dev-dependency plugin that
+  declares an Android plugin class (here: `integration_test`, standard Flutter SDK boilerplate, and
+  `flutter_native_splash`). Root-caused by reading the installed Flutter 3.35.3 SDK's own
+  `flutter_tools` source (`_writeAndroidPluginRegistrant` doesn't apply the same dev-dependency
+  filter the Gradle-side `PluginHandler.kt` does) — this is a genuine SDK inconsistency, not a
+  project misconfiguration, and would affect any Flutter 3.35.3 project using either package.
+  Neither package is called at runtime by `lib/`, so moving them to regular dependencies has no
+  behavioral effect beyond fixing the classpath mismatch.
+
+### Architecture note — why images aren't all bundled locally
+Each product's **primary** photo is a bundled local asset (fast, offline-capable, what every
+listing/card surface uses). Extended galleries and per-variant photos are served through the
+existing `CachedNetworkImage` path (`AppImage`'s tier 2) straight from the original
+`media.zid.store` URLs instead of also being bundled — bundling all ~580 gallery/variant photos
+locally would have added on the order of 150–250MB to the app; this way the release APK grew by
+~11MB (55.8MB → 67.0MB) while every surface still shows a real, correct photo, just via two tiers
+depending on where it's shown, matching the specified local-asset → remote → placeholder fallback
+chain.
+
+### Verified
+- `flutter analyze`: zero issues.
+- `flutter test`: 19/19 passing (two test fixtures updated to reference a real asset filename
+  after the placeholder images were removed).
+- `flutter build apk --release`: succeeds, 67.0MB (`build/app/outputs/flutter-apk/app-release.apk`).
+- Data pipeline self-verified: 191/191 products matched to a real website image, 191/191 downloaded
+  successfully (0 failures), 191/191 mapped in `ProductImageMapping`. See
+  `scripts/scraping/verification_table.csv` for the full per-product table.
+- UI wiring verified by reading (not modifying) the consuming widgets: `ProductCard`/`AppImage`
+  already resolve asset-vs-network per string prefix, and `product_detail_screen.dart` already
+  merges `product.images` with every `variant.imageUrl` into one deduped gallery — so populating
+  real image data was sufficient with zero UI code changes needed on Home, Listing, Details,
+  Search, Categories, Cart, or Wishlist.
+- Pixel-level visual verification via the Browser preview tools was attempted (web build compiled
+  and ran cleanly — Hive boxes opened, all product/category/cart modules loaded with zero console
+  errors) but screenshot/semantics-tree capture wasn't available in this session (same "Browser
+  pane not displayed" limitation noted above) — the signed release APK was built and provided
+  directly for on-device visual confirmation instead.

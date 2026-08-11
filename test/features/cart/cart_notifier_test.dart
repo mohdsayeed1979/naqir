@@ -16,7 +16,7 @@ Product _buildProduct({String id = 'p-1', double price = 50}) {
     shortDescription: 'short',
     description: 'description',
     specifications: const {},
-    images: const ['assets/images/products/box_gold.png'],
+    images: const ['assets/images/products/DRT-TERMEH-BOX-T01-RED.jpg'],
     price: price,
     sku: 'SKU-$id',
     categoryId: 'cat-1',

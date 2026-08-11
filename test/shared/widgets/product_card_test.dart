@@ -11,7 +11,7 @@ Product _buildProduct() {
     shortDescription: 'short',
     description: 'description',
     specifications: const {},
-    images: const ['assets/images/products/box_gold.png'],
+    images: const ['assets/images/products/DRT-TERMEH-BOX-T01-RED.jpg'],
     price: 125,
     compareAtPrice: 150,
     sku: 'SKU-1',

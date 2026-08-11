@@ -2,45 +2,30 @@ import 'package:naqirgiftbox/core/error/exceptions.dart';
 import 'package:naqirgiftbox/features/categories/data/datasources/category_data_source.dart';
 import 'package:naqirgiftbox/features/categories/data/models/category_dto.dart';
 
+/// Real product-line categories derived from naqirgiftbox.com's actual
+/// catalog structure (the storefront itself only publishes one "Gift box"
+/// category; these three groupings mirror the real product-line naming
+/// already present in every SKU/slug: Termeh Box, Termeh Chest, Gift Box).
+// GENERATED with scripts/scraping/generate_dart.py - do not hand-edit.
 class CategoryMockDataSource implements CategoryDataSource {
-  static const _productImages = 'assets/images/products';
-
   static const _categories = [
     CategoryDto(
-      id: 'cat-gift-boxes',
-      name: 'Gift Boxes',
-      slug: 'gift-boxes',
-      imageUrl: '$_productImages/box_brown.png',
+      id: 'cat-termeh-box',
+      name: 'Termeh Box',
+      slug: 'termeh-box',
+      imageUrl: 'assets/images/products/DRT-TERMEH-BOX-T01-RED.jpg',
     ),
     CategoryDto(
-      id: 'cat-dates-trays',
-      name: 'Dates Trays',
-      slug: 'dates-trays',
-      imageUrl: '$_productImages/box_blush.png',
+      id: 'cat-termeh-chest',
+      name: 'Termeh Chest',
+      slug: 'termeh-chest',
+      imageUrl: 'assets/images/products/DRT-TERMEH-CHEST-K02-RED.jpg',
     ),
     CategoryDto(
-      id: 'cat-chocolate',
-      name: 'Chocolate Collections',
-      slug: 'chocolate-collections',
-      imageUrl: '$_productImages/box_gold.png',
-    ),
-    CategoryDto(
-      id: 'cat-oud',
-      name: 'Incense & Oud',
-      slug: 'incense-oud',
-      imageUrl: '$_productImages/box_navy.png',
-    ),
-    CategoryDto(
-      id: 'cat-wedding',
-      name: 'Wedding Favors',
-      slug: 'wedding-favors',
-      imageUrl: '$_productImages/box_blush.png',
-    ),
-    CategoryDto(
-      id: 'cat-corporate',
-      name: 'Corporate Gifts',
-      slug: 'corporate-gifts',
-      imageUrl: '$_productImages/box_navy.png',
+      id: 'cat-gift-box',
+      name: 'Gift Box',
+      slug: 'gift-box',
+      imageUrl: 'assets/images/products/JOZA-L245TB.jpg',
     ),
   ];
 

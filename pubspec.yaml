@@ -69,10 +69,19 @@ dependencies:
   package_info_plus: ^9.0.1
   intl: ^0.20.2
 
+  # Declared as regular (non-dev) dependencies as a workaround for a Flutter
+  # 3.35.3 SDK bug: GeneratedPluginRegistrant.java references every plugin
+  # with an Android pluginClass unconditionally, but the Gradle plugin
+  # correctly excludes dev_dependency-only plugins from the release
+  # classpath - the two disagree and the release build fails with
+  # "package ... does not exist". Neither package is used by lib/ at
+  # runtime; this only affects which classpath they're compiled into.
+  integration_test:
+    sdk: flutter
+  flutter_native_splash: ^2.4.7
+
 dev_dependencies:
   flutter_test:
-    sdk: flutter
-  integration_test:
     sdk: flutter
 
   flutter_lints: ^5.0.0
@@ -80,7 +89,6 @@ dev_dependencies:
   freezed: ^3.2.5
   json_serializable: ^6.14.1
   mocktail: ^1.0.5
-  flutter_native_splash: ^2.4.7
   flutter_launcher_icons: ^0.14.4
 
 flutter:

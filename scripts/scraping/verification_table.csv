@@ -1,0 +1,192 @@
+SKU,Name,Line,Website Image Found,Downloaded,App Mapping,Variants,Variant Images Resolved
+DRT-TERMEH-BOX-T01-RED,Termeh box-T01-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T01-GREEN,Termeh box-T01-Green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T01-BLUE,Termeh box-T01- Blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T02-RED,Termeh box-T02-red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T02-GREEN,Termeh box-T02-Green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T02-BLUE,Termeh box-T02-Blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T02-RED-2,Termeh box-T02-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T03-GREEN,Termeh box-T03-Green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T03-BLUE,Termeh box-T03-/ Blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T03-RED,Termeh box-T03-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+DRT-TERMEH-BOX-T03-RED-2,Termeh box-T03-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T04-GREEN,Termeh box-T04-Green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T04-BLUE,Termeh box-T04-Blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T04-RED,Termeh box-T04- Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-K44-RED,Termeh box-k44-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-K44-BLUE,Termeh box-k44-BLUE,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-K44GREEN,Termeh box-k44GREEN,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-K55-RED,Termeh box-k55-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-K55-BLUE,Termeh box-k55-blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-K55-GREEN,Termeh box-k55-green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T11-RED,Termeh box-T11-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T11-BLUE,Termeh box-T11- Blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T11-GREEN,Termeh box-T11- Green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T10-RED,Termeh box-T10-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T10-BLUE,Termeh box-T10-Blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-T10-GREEN,Termeh box-T10-Green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-VIP-OVAL-RED,Termeh box-VIP Oval-Red/,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-VIP-OVAL-BLUE,Termeh box-VIP Oval-blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-VIP-OVAL-GREEN,Termeh box-VIP Oval-Green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-VIP-RED,Termeh box-VIP-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-VIP-BLUE,Termeh box-VIP-Blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-VIP-GREEN,Termeh box-VIP-Green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K02-RED,Termeh Chest-K02-Red,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K02-BLUE,Termeh Chest-K02-blue,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K02-GREEN,Termeh Chest-K02-green,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K03-RED,Termeh Chest-K03-Red,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K03-BLUE,Termeh Chest-K03- Blue,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K03-GREEN,Termeh Chest-K03- Green,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K04-RED,Termeh Chest-K04-Red,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K04-BLUE,Termeh Chest-K04-blue,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K04-GREEN,Termeh Chest-K04-green,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K05-RED,Termeh Chest-K05-Red,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K05-BLUE,Termeh Chest-K05- Blue,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K05-GREEN,Termeh Chest-K05-Green,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K06-RED,Termeh Chest-K06-Red,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K06-BLUE,Termeh Chest-K06- Blue,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K06-GREEN,Termeh Chest-K06- Green,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K07-RED,Termeh Chest-K07-Red,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K07-BLUE,Termeh Chest-K07- Blue,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K07-GREEN,Termeh Chest-K07-Green,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K08-RED,Termeh Chest-K08-red,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K08-GREEN,Termeh Chest-K08-Green,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-CHEST-K08-BLUE,Termeh Chest-K08-Blue,Termeh Chest,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-OVAL01-RED,Termeh box-Oval01-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-OVAL01-BLUE,Termeh box-Oval01- Blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-OVAL01-GREEN,Termeh box-Oval01-Green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-OVAL02-RED,Termeh box-Oval02-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-OVAL02-BLUE,Termeh box-Oval02-Blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-OVAL02-GREEN,Termeh box-Oval02-Green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-OVAL03-RED,Termeh box-Oval03-Red,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-OVAL03-BLUE,Termeh box-Oval03- Blue,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+DRT-TERMEH-BOX-OVAL03-GREEN,Termeh box-Oval03-Green,Termeh Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L245TB,Gift box L245TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-L245K3,Gift box L245K3,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L245CH2,Gift box L245CH2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D245K2,Gift box D245K2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D245M4,Gift box D245M4,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D245KMG,Gift box D245KMG,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-D245CH,Gift box D245CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-D245K1,Gift box D245K1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-L245GM,Gift box L245GM,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D245M3,Gift box D245M3,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-2KSLTB,Gift box 2KSLTB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-2KSLCH2,Gift box 2KSLCH2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L325M6T,Gift box L325M6T,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-2KSLM3,Gift box 2KSLM3,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-2KSLM1,Gift box 2KSLM1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-2KSLK2,Gift box 2KSLK2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D324CH,Gift box D324CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-D324M2,Gift box D324M2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D324K1,Gift box D324K1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L324TB,Gift box L324TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-JAR,Gift box JAR,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-L324SB,Gift box L324SB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-B32,Gift box B32,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-B33,Gift box B33,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-B41,Gift box B41,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-8ZS,Gift box 8ZS,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-8ZS2R,Gift box 8ZS2R,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-K22TB,Gift box K22TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-K324TB,Gift box K324TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L131G,Gift box L131G,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-2TS2K,Gift box 2TS2K,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L324S,Gift box L324S,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-D324CH-2,Gift box D324CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L325M5,Gift box L325M5,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,0
+JOZA-2KSLCH1,Gift box 2KSLCH1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-2KSLK1,Gift box 2KSLK1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-L327P,Gift box L327P,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-L1553GM,Gift box L1553GM,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L1553P4,Gift box L1553P4,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D245M7,Gift box D245M7,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D2435KMG,Gift box D2435KMG,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D2435K1,Gift box D2435K1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D2235CH,Gift box D2235CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-6ZQ,Gift box 6ZQ,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-K22CH,Gift box K22CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-K324CH,Gift box K324CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D306K1,Gift box D306K1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L9S,Gift box L9S,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L223TB,Gift box L223TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-2TS1K,Gift box 2TS1K,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-L2435CH2,Gift box L2435CH2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D2235M4,Gift box D2235M4,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L245P4,Gift box L245P4,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L324P,Gift box L324P,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-L1553M7,Gift box L1553M7,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D324K2,Gift box D324K2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D324M1,Gift box D324M1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-B31,Gift box B31,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D324TB,Gift box D324TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D245TB,Gift box D245TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L324CH2,Gift box L324CH2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-2KSLCH2-2,Gift box 2KSLCH2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L245CH2-2,Gift box L245CH2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L2435CH2-2,Gift box L2435CH2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L324TB-2,Gift box L324TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-2KSLTB-2,Gift box 2KSLTB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L245TB-2,Gift box L245TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-D2435TB,Gift box D2435TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L223TB-2,Gift box L223TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L379K1,Gift box L379K1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L3745K1,Gift box L3745K1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-D306K1-2,Gift box D306K1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-2KSLK1-2,Gift box 2KSLK1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-L245K3-2,Gift box L245K3,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L379K2,Gift box L379K2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L3745K2,Gift box L3745K2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D324K2-2,Gift box D324K2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-2KSLK2-2,Gift box 2KSLK2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D245K2-2,Gift box D245K2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D2435K2,Gift box D2435K2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L379M4,Gift box L379M4,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L3745M4,Gift box L3745M4,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D245M4-2,Gift box D245M4,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D2435M4,Gift box D2435M4,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D2235M4-2,Gift box D2235M4,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-2KSLM3-2,Gift box 2KSLM3,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D324M2-2,Gift box D324M2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D324M3,Gift box D324M3,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D2235M3,Gift box D2235M3,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L223M3,Gift box L223M3,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-D245KMG-2,Gift box D245KMG,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-D2435KMG-2,Gift box D2435KMG,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D2235KMG,Gift box D2235KMG,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D324K1-2,Gift box D324K1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,0
+JOZA-D245K1-2,Gift box D245K1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-D2435K1-2,Gift box D2435K1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D2235K1,Gift box D2235K1,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-2KSLCH,Gift box 2KSLCH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D324CH-3,Gift box D324CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,0
+JOZA-D245CH-2,Gift box D245CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-D2435CH,Gift box D2435CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D2235CH-2,Gift box D2235CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-K22CH-2,Gift box K22CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-K324CH-2,Gift box K324CH,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-K22TB-2,Gift box K22TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-K324TB-2,Gift box K324TB,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-2TS1K-2,Gift box 2TS1K,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-L324S-2,Gift box L324S,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-6ZQ-2,Gift box 6ZQ,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-6ZTQ,Gift box 6ZTQ,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-D245M7-2,Gift box D245M7,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-D306M7,Gift box D306M7,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-L325M6R,Gift box L325M6R,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L325M6T-2,Gift box L325M6T,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L325M5R,Gift box L325M5R,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L325M5T,Gift box L325M5T,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-8ZS-2,Gift box 8ZS,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-LR22P,Gift box LR22P,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-LR22GP,Gift box LR22GP,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-LR324P,Gift box LR324P,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-LR324GP,Gift box LR324GP,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-L1553GM-2,Gift box L1553GM,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-L245GM-2,Gift box L245GM,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0
+JOZA-JARK,Gift box JARK,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-JAR2K,Gift box JAR2K,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],2,2
+JOZA-JAR2,Gift box JAR2,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],3,3
+JOZA-JAR-2,box JAR,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-L324P-2,Gift box L324P,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],4,4
+JOZA-L1553M7-2,Gift box L1553M7,Gift Box,Yes,Yes,ProductImageMapping + ProductDto.images[0],0,0

@@ -1,0 +1,16 @@
+Total: 191
+Categories: Counter({'Gift box': 191})
+Structures: Counter({'standalone': 118, 'parent': 73})
+Unique SKUs: 191 dupes: 0
+
+Sample of 10:
+DRT-TERMEH-BOX-T01-RED | Termeh box-T01-Red | 75 | standalone |imgs: 1
+DRT-TERMEH-BOX-T01-GREEN | Termeh box-T01-Green | 75 | standalone |imgs: 3
+DRT-TERMEH-BOX-T01-BLUE | Termeh box-T01- Blue | 75 | standalone |imgs: 3
+DRT-TERMEH-BOX-T02-RED | Termeh box-T02-red | 75 | standalone |imgs: 1
+DRT-TERMEH-BOX-T02-GREEN | Termeh box-T02-Green | 85 | standalone |imgs: 3
+DRT-TERMEH-BOX-T02-BLUE | Termeh box-T02-Blue | 85 | standalone |imgs: 4
+DRT-TERMEH-BOX-T02-RED-2 | Termeh box-T02-Red | 85 | standalone |imgs: 1
+DRT-TERMEH-BOX-T03-GREEN | Termeh box-T03-Green | 100 | standalone |imgs: 4
+DRT-TERMEH-BOX-T03-BLUE | Termeh box-T03-/ Blue | 100 | standalone |imgs: 4
+DRT-TERMEH-BOX-T03-RED | Termeh box-T03-Red | 100 | parent |imgs: 9

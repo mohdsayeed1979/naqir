@@ -63,12 +63,30 @@ lib/core/localization/gen/
 **/android/key.properties
 **/*.jks
 **/*.keystore
+**/*.p12
+**/*.pfx
 
-# Firebase config (per-developer; generate your own via `flutterfire configure`)
+# iOS/macOS signing (never commit real certs/provisioning profiles)
+**/*.p8
+**/*.mobileprovision
+**/*.cer
+
+# Generic private keys/certs
+**/*.pem
+**/id_rsa
+**/id_rsa.*
+**/id_ed25519
+**/id_ed25519.*
+
+# Firebase / Google Cloud config (per-developer; generate your own via
+# `flutterfire configure`) and any service-account credentials
 **/google-services.json
 **/GoogleService-Info.plist
 lib/firebase_options.dart
+**/service-account*.json
+**/*service_account*.json
 
 # Env files (base URLs/flags are passed via --dart-define, not committed here)
 .env
 .env.*
+!.env.example

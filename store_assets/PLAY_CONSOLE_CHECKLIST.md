@@ -140,16 +140,22 @@ this — see CHANGELOG.)
 نقير التمر مقرّها في الضياء، الرياض، المملكة العربية السعودية.
 ```
 
-## 4. Privacy policy — **[YOU]**
+## 4. Privacy policy & legal pages — **LIVE**
 
-Google requires a **live, public URL** — in-app text isn't enough. I've written the page for you:
-`store_assets/privacy_policy.html`. Host it anywhere public — the simplest options:
+Google requires a **live, public URL** — in-app text isn't enough. The legal/support site is now
+hosted on GitHub Pages (source: `main` branch, `/docs` folder) and served over HTTPS:
 
-- Upload it to naqirgiftbox.com (e.g. `naqirgiftbox.com/privacy-policy.html`)
-- Free static hosting: GitHub Pages, Firebase Hosting, Netlify — all take a few minutes
-- Then paste that URL into Play Console's "Privacy policy" field
+- **Privacy policy** (paste into Play Console's "Privacy policy" field):
+  `https://mohdsayeed1979.github.io/naqir/privacy-policy.html`
+- Support / help center: `https://mohdsayeed1979.github.io/naqir/support.html`
+- Data & account deletion: `https://mohdsayeed1979.github.io/naqir/data-deletion.html`
+- Terms & conditions: `https://mohdsayeed1979.github.io/naqir/terms.html`
+- Contact: `https://mohdsayeed1979.github.io/naqir/contact.html`
+- Landing page: `https://mohdsayeed1979.github.io/naqir/`
 
-I can help you set up any of those hosting options if you want — just say which one.
+These pages live in `docs/` and are the canonical, hosted versions. (An earlier standalone
+`store_assets/privacy_policy.html` draft predates this site; the hosted `docs/privacy-policy.html`
+above is the one to use.)
 
 ## 5. Data Safety form — draft answers
 

@@ -92,6 +92,7 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `flutter build web --release`: succeeds (dart2js + tree-shaking + Wasm-compatibility dry run).
 - `flutter build apk --debug`: succeeds, after accepting Android SDK licenses and the
   `permission_handler` fix above.
+- `flutter build ios --no-codesign`: succeeds (`Runner.app` 49.2MB built in 50.7s on Xcode 26.6 / macOS).
 - `flutter build windows --debug`: succeeds, after installing Visual Studio Build Tools 2022 with
   the "Desktop development with C++" workload plus the ATL component specifically (the default
   workload install doesn't include ATL, which `flutter_local_notifications_windows` and

@@ -62,7 +62,7 @@ Legend: ✅ done · 🚧 in progress · ⬜ not started · 🔒 blocked on user-
 - ✅ Windows build verified — `flutter build windows --debug` succeeds (Visual Studio Build Tools +
   ATL component installed; `flutter_local_notifications`/`flutter_secure_storage` Windows plugins
   need it)
-- 🔒 iOS build (needs macOS/Xcode — not available on this machine; code is iOS-ready)
+- ✅ iOS build verified — `flutter build ios --no-codesign` succeeds (Xcode 26.6 on macOS)
 
 ## Phase 6 — Documentation
 - ✅ README, installation guide, API docs, deployment guide, folder structure doc all written
@@ -73,7 +73,6 @@ Legend: ✅ done · 🚧 in progress · ⬜ not started · 🔒 blocked on user-
 2. No Firebase project yet → push notifications code-complete but inactive (`NotificationService`
    no-ops safely without one).
 3. No payment merchant keys yet → payment architecture complete, native SDKs not wired.
-4. Windows machine → iOS cannot be compiled here.
-5. Web visual verification pending — needs the Browser pane displayed to compare against a
+4. Web visual verification pending — needs the Browser pane displayed to compare against a
    screenshot in a future turn, or the user running `flutter run -d chrome` locally.
-6. `integration_test/app_test.dart` needs a connected device/emulator to actually execute.
+5. `integration_test/app_test.dart` needs a connected device/emulator to actually execute.

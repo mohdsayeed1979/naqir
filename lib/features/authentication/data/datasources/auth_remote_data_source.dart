@@ -62,6 +62,15 @@ class AuthRemoteDataSource implements AuthDataSource {
   }
 
   @override
+  Future<void> deleteAccount() async {
+    // The server identifies the account to delete from the bearer token on
+    // this request (attached by AuthInterceptor); no user id is sent from the
+    // client, so a user can only delete their own account. A non-2xx
+    // response throws and the repository aborts the local wipe.
+    await _apiClient.delete<Map<String, dynamic>>(ApiEndpoints.account);
+  }
+
+  @override
   Future<UserDto> updateProfile({
     required String userId,
     required String email,

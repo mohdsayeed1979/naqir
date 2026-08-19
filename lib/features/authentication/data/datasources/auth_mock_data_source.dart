@@ -61,6 +61,14 @@ class AuthMockDataSource implements AuthDataSource {
   }
 
   @override
+  Future<void> deleteAccount() async {
+    // No backend exists in mock mode — the "account" is a fabricated local
+    // session, so there is nothing to delete server-side. The local wipe is
+    // handled by the repository. Succeeds so the local wipe proceeds.
+    await _simulateLatency();
+  }
+
+  @override
   Future<UserDto> updateProfile({
     required String userId,
     required String email,

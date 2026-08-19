@@ -90,6 +90,18 @@ class AuthNotifier extends AsyncNotifier<User?> {
     await _repository.logout();
     state = const AsyncValue.data(null);
   }
+
+  /// Permanently deletes the account. Only drops the session to the
+  /// signed-out state on a genuine success — on failure the user stays
+  /// authenticated and the caller surfaces the error.
+  Future<Result<void>> deleteAccount() async {
+    final result = await _repository.deleteAccount();
+    result.when(
+      success: (_) => state = const AsyncValue.data(null),
+      failure: (_) {},
+    );
+    return result;
+  }
 }
 
 final authProvider = AsyncNotifierProvider<AuthNotifier, User?>(

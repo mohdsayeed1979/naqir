@@ -50,6 +50,19 @@ const _paymentLabels = {
   PaymentMethodType.googlePay: 'Google Pay',
 };
 
+// App Store review (2026): card payments, Apple Pay and Google Pay are
+// intentionally NOT offered in this release. They were previously shown as
+// selectable options backed by [UnconfiguredGateway], which always fails —
+// Apple's reviewer selected Apple Pay/Card and saw the failure
+// ("failed to load card payments or Apple Pay", Guideline 2.1(a)).
+//
+// Only genuinely working methods are listed here. The gateway abstraction,
+// DI registrations and PaymentMethodType enum are all preserved intact — to
+// re-enable a method later, wire in its real gateway (see
+// docs/ARCHITECTURE.md §8) and add it back to this list. Do NOT add a method
+// here until its gateway is fully functional and verified.
+const _enabledPaymentMethods = [PaymentMethodType.cashOnDelivery];
+
 class CheckoutScreen extends ConsumerStatefulWidget {
   const CheckoutScreen({super.key});
 
@@ -157,7 +170,7 @@ class _CheckoutScreenState extends ConsumerState<CheckoutScreen> {
           _SectionCard(
             title: l10n.checkoutPaymentMethod,
             child: Column(
-              children: PaymentMethodType.values
+              children: _enabledPaymentMethods
                   .map(
                     (method) => RadioListTile<PaymentMethodType>(
                       contentPadding: EdgeInsets.zero,
@@ -168,11 +181,6 @@ class _CheckoutScreenState extends ConsumerState<CheckoutScreen> {
                       onChanged: (value) =>
                           setState(() => _selectedPayment = value!),
                       title: Text(_paymentLabels[method]!),
-                      subtitle: method == PaymentMethodType.cashOnDelivery
-                          ? null
-                          : const Text(
-                              'Requires merchant setup — see docs/ARCHITECTURE.md',
-                            ),
                     ),
                   )
                   .toList(),

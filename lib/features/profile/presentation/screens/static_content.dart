@@ -88,8 +88,8 @@ const faqItems = <(String, String)>[
   ),
   (
     'What payment methods are accepted?',
-    'We support major credit/debit cards, Apple Pay, and local payment methods including Mada, '
-        'through our secure payment partners.',
+    'Orders are currently placed with Cash on Delivery within Saudi Arabia. For quotes or other '
+        'payment arrangements, reach out via Contact Us and our team will assist you.',
   ),
   (
     'Do you ship internationally?',

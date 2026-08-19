@@ -14,12 +14,21 @@ import 'package:naqirgiftbox/shared/widgets/cards/product_card.dart';
 class ProductRail extends ConsumerWidget {
   const ProductRail({
     required this.products,
+    required this.heroNamespace,
     super.key,
     this.height = 260,
     this.cardWidth = 168,
   });
 
   final List<Product> products;
+
+  /// Unique per rail. The same product can appear in more than one rail (e.g.
+  /// Featured *and* Best Sellers), so each card's Hero tag is namespaced to
+  /// keep it unique within the page — two heroes sharing a tag in one subtree
+  /// throws and cascades into a Navigator key assertion. Namespaced tags don't
+  /// match the detail screen's `product-image-<id>` hero, so rails don't play
+  /// the shared-element flight (grid/search/wishlist still do).
+  final String heroNamespace;
   final double height;
   final double cardWidth;
 
@@ -40,6 +49,7 @@ class ProductRail extends ConsumerWidget {
             width: cardWidth,
             child: ProductCard(
               product: product,
+              heroTag: '$heroNamespace-${product.id}',
               isWishlisted: wishlist.contains(product.id),
               onTap: () => context.push(RoutePaths.productPath(product.id)),
               onToggleWishlist: () =>

@@ -125,6 +125,14 @@ class _ProductDetailContent extends ConsumerWidget {
           expandedHeight: 380,
           backgroundColor: theme.colorScheme.surface,
           foregroundColor: theme.colorScheme.onSurface,
+          // Pop through go_router (not Navigator.maybePop) so the route match
+          // is actually removed. Otherwise the popped page lingers in
+          // go_router's match list and re-materialises on the next branch
+          // switch, colliding page keys (`!keyReservation.contains(key)`).
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios_new_rounded),
+            onPressed: () => context.pop(),
+          ),
           flexibleSpace: FlexibleSpaceBar(
             background: ProductImageGallery(
               images: galleryImages,
@@ -327,7 +335,10 @@ class _ProductDetailContent extends ConsumerWidget {
                             child: SectionHeader(title: l10n.productRelated),
                           ),
                           const SizedBox(height: AppSpacing.sm),
-                          ProductRail(products: items),
+                          ProductRail(
+                            products: items,
+                            heroNamespace: 'detail-related',
+                          ),
                         ],
                       ),
                     ),
@@ -357,7 +368,10 @@ class _ProductDetailContent extends ConsumerWidget {
                             ),
                           ),
                           const SizedBox(height: AppSpacing.sm),
-                          ProductRail(products: items),
+                          ProductRail(
+                            products: items,
+                            heroNamespace: 'detail-recent',
+                          ),
                         ],
                       ),
                     ),
@@ -559,7 +573,10 @@ class _BottomActionBar extends ConsumerWidget {
                               quantity: quantity,
                               variant: selectedVariant,
                             );
-                        context.push(RoutePaths.cart);
+                        // /cart is a bottom-nav branch: switch to it with go()
+                        // — pushing a shell-branch route duplicates the shell
+                        // and its page keys (crashes/blank screens).
+                        context.go(RoutePaths.cart);
                       }
                     : null,
               ),

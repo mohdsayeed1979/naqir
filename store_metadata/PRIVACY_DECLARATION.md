@@ -1,14 +1,15 @@
 # App Store Connect — App Privacy declaration (Naqir Gift Box)
 
-This recommendation is derived from an audit of the **actual source code** of
-the shipped build (`1.0.0`, mock flavor), not from a generic template.
+This recommendation is derived from an audit of the **actual source code** and
+the **verified release IPA** (`1.0.0` build `4`, `build/ios/ipa/naqirgiftbox.ipa`),
+not from a generic template.
 
 ## Runtime reality (what the code actually does)
 
 | Behavior | Finding |
 |----------|---------|
 | Backend transmission of user data | **None.** App ships in `mock` flavor (`AppConfig.useMockData == true`); profile, orders, addresses, wishlist, cart are stored **only in on-device Hive + Keychain**. |
-| Firebase Analytics / Crashlytics / Messaging | **Inactive.** Gated behind `FIREBASE_ENABLED` (defaults false) **and** there is **no `GoogleService-Info.plist`** in the iOS target, so `Firebase.initializeApp()` never runs. SDKs are compiled in but dormant. See caveat below. |
+| Firebase Analytics / Crashlytics / Messaging | **Removed entirely.** The `firebase_*` packages were removed from the app; the release IPA contains **no** Firebase frameworks, symbols, endpoints, privacy manifests, or `GoogleService-Info.plist` (verified — see "Firebase status" below). |
 | Microphone / Speech | Voice search only, on user tap; uses Apple's `SFSpeechRecognizer` (system framework). Audio not stored by the app. |
 | WhatsApp / email | Opened via `url_launcher` only when the user taps Contact Us. No automatic transmission. |
 | Product images | Loaded from `naqirgiftbox.com` CDN (GET). No personal data sent. |
@@ -43,37 +44,54 @@ collection.
 | Contacts / Photos / Camera | No | — | No | Not accessed |
 | Audio data | No | — | No | Voice search via Apple `SFSpeechRecognizer`; not stored/sent by app |
 | Device ID / IDFA | No | — | No | No tracking, no ad SDKs |
-| Usage/Analytics data | No* | — | No | Firebase present but **inactive** (see caveat) |
-| Diagnostics/Crash data | No* | — | No | Crashlytics present but **inactive** (see caveat) |
+| Usage/Analytics data | No | — | No | No analytics SDK — Firebase removed |
+| Diagnostics/Crash data | No | — | No | No crash-reporting SDK — Crashlytics removed |
 
-## ⚠️ Caveat you must decide on (MANUAL)
+## Firebase status — REMOVED (verified against release IPA build 4)
 
-The Firebase/Google analytics SDKs (`firebase_analytics`, `firebase_crashlytics`,
-`GoogleAppMeasurement`) are **compiled into the binary** even though they never
-initialize (no `GoogleService-Info.plist`, gated off). Apple's privacy review
-can detect bundled analytics SDKs. Two clean options — pick one before submit:
+Firebase was **removed entirely** before submission (commit `648f88e`). The
+earlier "dormant Firebase" caveat no longer applies. Verified against
+`build/ios/ipa/naqirgiftbox.ipa` (1.0.0 build 4):
 
-1. **Declare "Data Not Collected" (recommended for this build)** — truthful to
-   runtime behavior. Low risk because the SDKs are provably dormant (no config
-   file, no init). Keep this documentation on hand in case a reviewer asks.
-2. **Remove the Firebase dependencies from this release** — if you want zero
-   ambiguity, drop `firebase_*` from `pubspec.yaml` for this submission and
-   re-add them when the backend/analytics actually go live. This is a code
-   change outside the current phase; tell me and I'll do it.
+- **Firebase packages removed** — `firebase_core`, `firebase_messaging`,
+  `firebase_analytics`, `firebase_crashlytics` dropped from `pubspec.yaml`
+  (and `pubspec.lock`, iOS `Podfile.lock`).
+- **Not present in the release IPA** — zero Firebase/Google frameworks in the
+  app bundle; zero Firebase symbols in the `Runner`/`App` binaries.
+- **No Firebase Analytics / GoogleAppMeasurement** — engine not linked.
+- **No Firebase Crashlytics.**
+- **No Firebase Messaging (FCM).**
+- **No Firebase identifiers** — no Installations/FID, no Firebase device id.
+- **No Firebase tracking** — no ad/attribution SDK; `NSPrivacyTracking = false`.
+- **No Firebase network communication** — no `app-measurement.com`,
+  `firebaseinstallations`, or `crashlytics` endpoints anywhere in the bundle;
+  device log shows zero Firebase runtime activity.
+- **No Firebase privacy manifests** — every Firebase-origin `.xcprivacy` /
+  `*_Privacy.bundle` is gone; only legitimate non-Firebase plugin manifests
+  remain.
+- **No `GoogleService-Info.plist`** — absent from the repo and the IPA.
+- **No `firebase_options.dart`** — never existed.
 
-Do **not** declare analytics/tracking as *collected* for this build — the code
-does not perform it, and over-declaring is itself inaccurate.
+Only `flutter_local_notifications` (local, on-device notifications) remains —
+it is not Firebase and performs no off-device collection.
 
-## When the backend / Firebase go live (future)
+## Final App Store Connect recommendation
+
+> **Data Not Collected.**
+
+This is now unambiguous: nothing is transmitted off-device to the developer or
+any third party, and no analytics/crash/tracking SDK is present in the binary.
+
+## If a real backend is added later (future)
 
 Re-answer the questionnaire to declare, at minimum: Contact Info (name, email,
-phone), User Content (addresses, order history), Identifiers (user id), and —
-if Firebase is enabled — Usage Data and Diagnostics (linked or not per config).
-Tracking stays **No** unless an ad/attribution SDK is added.
+phone), User Content (addresses, order history), and Identifiers (user id).
+Tracking stays **No** unless an ad/attribution SDK is added. If Firebase (or any
+analytics/crash SDK) is re-introduced, update this document and the label.
 
 ## Privacy policy URL
 
-Public policy: `https://<your-github-pages-domain>/privacy-policy.html`
-(updated in this branch to match the on-device-only reality and the in-app
-deletion path). Verify it returns HTTP 200 publicly before submitting — see
-APP_REVIEW_NOTES.md.
+Public policy (live, verified HTTP 200, no login):
+`https://mohdsayeed1979.github.io/naqir/privacy-policy.html`
+Reflects the on-device-only reality and the in-app deletion path
+(`Profile → Settings → Delete Account`). See APP_REVIEW_NOTES.md.

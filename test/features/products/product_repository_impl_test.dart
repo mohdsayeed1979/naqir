@@ -45,7 +45,6 @@ void main() {
       config: const AppConfig(
         flavor: Flavor.mock,
         apiBaseUrl: 'https://example.test',
-        firebaseEnabled: false,
         enableRequestLogging: false,
       ),
       remoteDataSource: remoteDataSource,

@@ -22,7 +22,6 @@ class _MockSettingsBox extends Mock implements Box<String> {}
 const _config = AppConfig(
   flavor: Flavor.mock,
   apiBaseUrl: 'https://example.test/v1',
-  firebaseEnabled: false,
   enableRequestLogging: false,
 );
 

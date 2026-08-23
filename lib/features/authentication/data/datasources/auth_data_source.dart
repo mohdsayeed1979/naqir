@@ -21,6 +21,12 @@ abstract class AuthDataSource {
 
   Future<void> forgotPassword({required String email});
 
+  /// Permanently deletes the authenticated user's server-side account and
+  /// data. Authorization is derived server-side from the caller's session
+  /// token — the client never sends a user id — so a user can only ever
+  /// delete their own account.
+  Future<void> deleteAccount();
+
   Future<UserDto> updateProfile({
     required String userId,
     required String email,

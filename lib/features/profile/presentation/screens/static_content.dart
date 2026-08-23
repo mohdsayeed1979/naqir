@@ -27,27 +27,33 @@ const aboutUsSections = <(String, String)>[
 
 const privacyPolicySections = <(String, String)>[
   (
-    'Information we collect',
-    'We collect the information you provide when creating an account or placing an order — your '
-        'name, email, phone number, delivery address, and order history. We do not collect payment '
-        'card details directly; those are handled by our PCI-compliant payment partners.',
+    'Information and where it is stored',
+    'The information you enter — your name, email, phone number, delivery address, wishlist, cart '
+        'and order history — is stored only on your device. This version of the app does not '
+        'transmit that information to our servers or to any third party.',
   ),
   (
     'How we use it',
-    'We use your information to fulfil and deliver orders, provide customer support, send order '
-        'and shipping updates, and — only with your consent — send you offers and product updates. '
-        'We never sell your personal data to third parties.',
+    'Your information is used on-device to show your profile, wishlist, cart, saved addresses and '
+        'order history. We do not sell your data, we do not use it for advertising, and we do not '
+        'track you across other apps or websites.',
   ),
   (
-    'Data retention & security',
-    'Your data is retained for as long as your account is active or as required by Saudi commercial '
-        'record-keeping regulations. Access tokens are stored in your device\'s secure hardware-backed '
-        'storage; we never store passwords in plain text.',
+    'Microphone and voice search',
+    'If you use voice search, the microphone is accessed only during that search and speech is '
+        'processed through your device\'s speech recognition to convert it to text. Audio is not '
+        'stored by the app.',
   ),
   (
-    'Your rights',
-    'You may request a copy of your data, ask us to correct it, or request deletion of your account '
-        'at any time from Settings, or by contacting us directly.',
+    'Contacting us',
+    'When you tap WhatsApp or email in Contact Us, your device opens that app so you can message '
+        'us. Anything you choose to send is shared with us through that channel, not automatically '
+        'by the app.',
+  ),
+  (
+    'Your rights & account deletion',
+    'You can permanently delete your account and all associated data at any time from '
+        'Profile → Settings → Delete Account. Deletion is immediate and cannot be undone.',
   ),
 ];
 
@@ -88,8 +94,8 @@ const faqItems = <(String, String)>[
   ),
   (
     'What payment methods are accepted?',
-    'We support major credit/debit cards, Apple Pay, and local payment methods including Mada, '
-        'through our secure payment partners.',
+    'Orders are currently placed with Cash on Delivery within Saudi Arabia. For quotes or other '
+        'payment arrangements, reach out via Contact Us and our team will assist you.',
   ),
   (
     'Do you ship internationally?',

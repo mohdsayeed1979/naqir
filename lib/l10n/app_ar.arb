@@ -164,5 +164,14 @@
   "settingsLanguage": "اللغة",
   "settingsEnglish": "الإنجليزية",
   "settingsArabic": "العربية",
-  "settingsNotificationPreferences": "تفضيلات الإشعارات"
+  "settingsNotificationPreferences": "تفضيلات الإشعارات",
+
+  "settingsAccount": "الحساب",
+  "settingsDeleteAccount": "حذف الحساب",
+  "deleteAccountWarningTitle": "حذف حسابك؟",
+  "deleteAccountWarningBody": "سيؤدي هذا إلى حذف حسابك وجميع البيانات المرتبطة به على هذا الجهاز نهائيًا — ملفك الشخصي وطلباتك وعناوينك وقائمة أمنياتك وسلة التسوق والتفضيلات المحفوظة. لا يمكن التراجع عن هذا الإجراء.",
+  "deleteAccountConfirm": "حذف الحساب",
+  "deleteAccountCancel": "الاحتفاظ بحسابي",
+  "deleteAccountSuccess": "تم حذف حسابك وبياناتك.",
+  "deleteAccountError": "تعذّر حذف حسابك. لم يتم حذف أي شيء — يرجى المحاولة مرة أخرى."
 }

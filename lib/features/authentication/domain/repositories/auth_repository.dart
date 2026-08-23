@@ -26,4 +26,10 @@ abstract class AuthRepository {
   Future<User?> getCachedUser();
 
   Future<void> logout();
+
+  /// Permanently deletes the signed-in user's account and erases every
+  /// user-owned record on the device. On any failure the account and local
+  /// data are left intact and the user stays signed in — never reports a
+  /// false success. See docs/ACCOUNT_DELETION.md.
+  Future<Result<void>> deleteAccount();
 }

@@ -180,5 +180,14 @@
   "settingsLanguage": "Language",
   "settingsEnglish": "English",
   "settingsArabic": "Arabic",
-  "settingsNotificationPreferences": "Notification preferences"
+  "settingsNotificationPreferences": "Notification preferences",
+
+  "settingsAccount": "Account",
+  "settingsDeleteAccount": "Delete Account",
+  "deleteAccountWarningTitle": "Delete your account?",
+  "deleteAccountWarningBody": "This permanently deletes your account and all data associated with it on this device — your profile, orders, addresses, wishlist, cart and saved preferences. This action cannot be undone.",
+  "deleteAccountConfirm": "Delete Account",
+  "deleteAccountCancel": "Keep My Account",
+  "deleteAccountSuccess": "Your account and data have been deleted.",
+  "deleteAccountError": "We couldn't delete your account. Nothing was deleted — please try again."
 }

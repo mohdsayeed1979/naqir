@@ -182,14 +182,18 @@ added yet**: they require merchant keys we don't have and native Gradle/Xcode ch
 destabilize the build before there's anything real to test against. Wiring a live gateway is a
 single class implementation + one DI registration — see `docs/DEPLOYMENT.md`.
 
-## 9. Push notifications / Firebase
+## 9. Notifications (no Firebase)
 
-`firebase_core/messaging/analytics/crashlytics` are added as Dart dependencies, but
-initialization is wrapped in `AppConfig.firebaseEnabled` + try/catch so the app runs normally
-without a configured Firebase project. The native Android `google-services` Gradle plugin is
-**not applied** until the user runs `flutterfire configure` (requires their own Firebase/Google
-login — cannot be done on their behalf) and supplies `google-services.json` /
-`GoogleService-Info.plist`. This keeps `flutter build` green in the meantime.
+Firebase was **removed** before App Store submission — it was never initialized (no
+`GoogleService-Info.plist`, no `Firebase.initializeApp()`), so it collected/sent nothing, but the
+dormant SDKs still bundled crash/diagnostic privacy manifests into the binary. Removing it keeps
+the release binary Firebase-free and the App Privacy label unambiguously "Data Not Collected".
+
+Only local (on-device) notifications remain, via `flutter_local_notifications`
+(`NotificationService`) — no push / Firebase Cloud Messaging. The in-app notification
+**preferences** UI (`Profile → Settings → Notification preferences`) is unrelated to Firebase and
+persists toggles to Hive. If push is needed later, add a messaging provider then and re-declare
+App Privacy accordingly.
 
 ## 10. Security
 

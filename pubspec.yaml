@@ -2,7 +2,7 @@ name: naqirgiftbox
 description: "Naqir Gift Box - premium gifting e-commerce app"
 publish_to: 'none'
 
-version: 1.0.0+2
+version: 1.0.0+4
 
 environment:
   sdk: ^3.9.2
@@ -47,11 +47,7 @@ dependencies:
   # Typography
   google_fonts: ^8.1.0
 
-  # Firebase (see docs/ARCHITECTURE.md §9 — inactive until a Firebase project is configured)
-  firebase_core: ^4.12.1
-  firebase_messaging: ^16.4.3
-  firebase_analytics: ^12.4.5
-  firebase_crashlytics: ^5.2.6
+  # Local (on-device) notifications only — no Firebase / push messaging.
   flutter_local_notifications: ^20.1.0
 
   # UI

@@ -5,6 +5,7 @@ import 'package:naqirgiftbox/core/config/app_config.dart';
 import 'package:naqirgiftbox/core/error/exceptions.dart';
 import 'package:naqirgiftbox/core/error/failures.dart';
 import 'package:naqirgiftbox/core/error/result.dart';
+import 'package:naqirgiftbox/core/storage/local_user_data.dart';
 import 'package:naqirgiftbox/core/storage/secure/secure_storage_service.dart';
 import 'package:naqirgiftbox/features/authentication/data/datasources/auth_data_source.dart';
 import 'package:naqirgiftbox/features/authentication/data/models/user_dto.dart';
@@ -17,11 +18,13 @@ class AuthRepositoryImpl implements AuthRepository {
     required AuthDataSource remoteDataSource,
     required AuthDataSource mockDataSource,
     required SecureStorageService secureStorage,
+    required LocalUserDataStore localUserData,
     required Box<String> settingsBox,
   }) : _config = config,
        _remoteDataSource = remoteDataSource,
        _mockDataSource = mockDataSource,
        _secureStorage = secureStorage,
+       _localUserData = localUserData,
        _settingsBox = settingsBox;
 
   static const _cachedUserKey = 'cached_user';
@@ -30,6 +33,7 @@ class AuthRepositoryImpl implements AuthRepository {
   final AuthDataSource _remoteDataSource;
   final AuthDataSource _mockDataSource;
   final SecureStorageService _secureStorage;
+  final LocalUserDataStore _localUserData;
   final Box<String> _settingsBox;
 
   AuthDataSource get _dataSource =>
@@ -129,6 +133,29 @@ class AuthRepositoryImpl implements AuthRepository {
   Future<void> logout() async {
     await _secureStorage.clearTokens();
     await _settingsBox.delete(_cachedUserKey);
+  }
+
+  @override
+  Future<Result<void>> deleteAccount() async {
+    final cached = await getCachedUser();
+    if (cached == null) return const Result.failure(UnauthorizedFailure());
+
+    try {
+      // 1. Delete server-side account first. If this throws, we fall through
+      //    to the catch blocks and leave all local data intact — the user
+      //    stays signed in and sees the real error, never a fake success.
+      await _dataSource.deleteAccount();
+    } on AppException catch (e) {
+      return Result.failure(e.toFailure());
+    } catch (_) {
+      return const Result.failure(UnknownFailure());
+    }
+
+    // 2. Server side is gone (or never existed in mock mode) — now erase
+    //    every user-owned record on the device and drop the session.
+    await _localUserData.clearAll();
+    await _settingsBox.delete(_cachedUserKey);
+    return const Result.success(null);
   }
 
   Future<Result<User>> _guard(Future<AuthResultDto> Function() action) async {

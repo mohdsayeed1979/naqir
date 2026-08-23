@@ -131,7 +131,9 @@ class HomeScreen extends ConsumerWidget {
                     ),
                     child: SectionHeader(
                       title: l10n.homeShopByCategory,
-                      onSeeAll: () => context.push(RoutePaths.categories),
+                      // /categories is a bottom-nav branch — switch tabs with
+                      // go(); pushing it duplicates the shell page keys.
+                      onSeeAll: () => context.go(RoutePaths.categories),
                     ),
                   ),
                 ),
@@ -161,7 +163,7 @@ class HomeScreen extends ConsumerWidget {
                     child: SizedBox(height: AppSpacing.sm),
                   ),
                   SliverToBoxAdapter(
-                    child: ProductRail(products: sections.featured),
+                    child: ProductRail(products: sections.featured, heroNamespace: 'home-featured'),
                   ),
                 ],
                 if (sections.newArrivals.isNotEmpty) ...[
@@ -180,7 +182,7 @@ class HomeScreen extends ConsumerWidget {
                     child: SizedBox(height: AppSpacing.sm),
                   ),
                   SliverToBoxAdapter(
-                    child: ProductRail(products: sections.newArrivals),
+                    child: ProductRail(products: sections.newArrivals, heroNamespace: 'home-new'),
                   ),
                 ],
                 if (sections.bestSellers.isNotEmpty) ...[
@@ -199,7 +201,7 @@ class HomeScreen extends ConsumerWidget {
                     child: SizedBox(height: AppSpacing.sm),
                   ),
                   SliverToBoxAdapter(
-                    child: ProductRail(products: sections.bestSellers),
+                    child: ProductRail(products: sections.bestSellers, heroNamespace: 'home-best'),
                   ),
                 ],
                 const SliverToBoxAdapter(
@@ -303,7 +305,9 @@ class _HomeSkeleton extends StatelessWidget {
         const SizedBox(height: AppSpacing.sm),
         SizedBox(
           height: 260,
-          child: Row(
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            physics: const NeverScrollableScrollPhysics(),
             children: List.generate(
               3,
               (_) => const Padding(

@@ -8,6 +8,7 @@ import 'package:naqirgiftbox/core/network/api_client.dart';
 import 'package:naqirgiftbox/core/network/dio_factory.dart';
 import 'package:naqirgiftbox/core/network/network_info.dart';
 import 'package:naqirgiftbox/core/storage/hive/hive_boxes.dart';
+import 'package:naqirgiftbox/core/storage/local_user_data.dart';
 import 'package:naqirgiftbox/core/storage/secure/secure_storage_service.dart';
 import 'package:naqirgiftbox/features/authentication/data/datasources/auth_mock_data_source.dart';
 import 'package:naqirgiftbox/features/authentication/data/datasources/auth_remote_data_source.dart';
@@ -42,6 +43,9 @@ Future<void> configureDependencies() async {
   getIt.registerLazySingleton<SecureStorageService>(
     () => SecureStorageService(getIt<FlutterSecureStorage>()),
   );
+  getIt.registerLazySingleton<LocalUserDataStore>(
+    () => LocalUserDataStore(getIt<SecureStorageService>()),
+  );
 
   getIt.registerLazySingleton<InternetConnection>(InternetConnection.new);
   getIt.registerLazySingleton<NetworkInfo>(
@@ -74,6 +78,7 @@ void _configureAuthFeature() {
       remoteDataSource: getIt<AuthRemoteDataSource>(),
       mockDataSource: getIt<AuthMockDataSource>(),
       secureStorage: getIt<SecureStorageService>(),
+      localUserData: getIt<LocalUserDataStore>(),
       settingsBox: HiveBoxes.settings,
     ),
   );

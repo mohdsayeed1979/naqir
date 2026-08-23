@@ -8,7 +8,6 @@ class AppConfig {
   const AppConfig({
     required this.flavor,
     required this.apiBaseUrl,
-    required this.firebaseEnabled,
     required this.enableRequestLogging,
   });
 
@@ -24,14 +23,12 @@ class AppConfig {
         'API_BASE_URL',
         defaultValue: 'https://api.naqirgiftbox.example/v1',
       ),
-      firebaseEnabled: const bool.fromEnvironment('FIREBASE_ENABLED'),
       enableRequestLogging: flavor != Flavor.production,
     );
   }
 
   final Flavor flavor;
   final String apiBaseUrl;
-  final bool firebaseEnabled;
   final bool enableRequestLogging;
 
   /// When true, repositories read from in-memory/fixture data instead of
